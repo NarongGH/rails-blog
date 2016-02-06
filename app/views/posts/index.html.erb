@@ -1,0 +1,13 @@
+<h3>Show all Posts</h3>
+
+	<% @posts.each do |post| %>
+		<h4><%= post.title %></h4>
+		<small><%= post.tag %></small>
+		<div class="post-content">
+			<p>
+				<%= truncate(post.content, length: 100) %> 
+				<%= link_to "Read More", post %>
+			</p>
+		</div>
+		<hr>
+	<% end %>

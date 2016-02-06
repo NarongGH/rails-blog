@@ -1,0 +1,16 @@
+<%= form_for @post do |f| %>
+	<div class="form-group">
+		<%= f.label :title %>
+		<%= f.text_field :title, class: "form-control", placeholder: "Post title" %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.label :tag %>
+		<%= f.text_field :tag, class: "form-control", placeholder: "Tag" %>
+	</div>
+	<div class="form-group">
+		<%= f.label :content %> 
+		<%= f.text_area :content, class: "form-control", placeholder: "Post content" %>
+	</div>
+	<%= f.submit class: "btn btn-info" %>
+<% end %>
