@@ -2,7 +2,7 @@
 
 	<% @posts.each do |post| %>
 		<h4><%= post.title %></h4>
-		<small><%= post.tag %></small>
+		<small class="btn btn-info btn-xs"><%= post.tag %></small>
 		<div class="post-content">
 			<p>
 				<%= truncate(post.content, length: 100) %> 
